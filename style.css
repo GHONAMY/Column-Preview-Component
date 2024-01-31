@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75); /* Paragraph */
+  --Very-light-gray: hsl(0, 0%, 95%); /* Background, Buttons, Headdings */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  /* font-family: "Big Shoulders Display", sans-serif; */
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--Very-light-gray);
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 15px;
+}
+
+.container .col:first-child {
+  background-color: var(--Bright-orange);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.container .col:nth-child(2) {
+  background-color: var(--Dark-cyan);
+}
+
+.container .col:last-child {
+  background-color: var(--Very-dark-cyan);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.container .col {
+  padding: 45px;
+}
+
+.container .col h3 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 30px;
+  color: var(--Very-light-gray);
+  text-transform: uppercase;
+  margin: 35px 0;
+}
+
+.container .col p {
+  color: var(--Transparent-white);
+  line-height: 1.6;
+  margin-bottom: 100px;
+}
+
+.container .col .btn {
+  background-color: var(--Very-light-gray);
+  border-radius: 20px;
+  padding: 12px 25px;
+  transition: 0.3s;
+  border: 1px solid var(--Very-light-gray);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container .col:first-child .btn {
+  color: var(--Bright-orange);
+}
+
+.container .col:nth-child(2) .btn {
+  color: var(--Dark-cyan);
+}
+
+.container .col:last-child .btn {
+  color: var(--Very-dark-cyan);
+}
+
+.container .col .btn:hover {
+  color: var(--Very-light-gray);
+  background-color: transparent;
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 25px 15px;
+  }
+  .container .col:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+  }
+  .container .col:last-child {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+  }
+} 
